@@ -69,14 +69,14 @@ function add_file( $phar, $path ) {
 					'\/nb\/oxymel\/',
 					'-command\/src\/',
 					'\/wp-cli\/[^\n]+?-command\/',
-					'\/symfony\/(?!finder|polyfill-mbstring|process)\'',
+					'\/symfony\/(?!finder|polyfill-mbstring|process|var-dumper)\'',
 					'\/(?:dealerdirect|squizlabs|wimg)\/',
 				);
 			} else {
 				$strips = array(
 					'\/(?:behat|gherkin)\/src\/',
 					'\/phpunit\/',
-					'\/symfony\/(?!console|filesystem|finder|polyfill-mbstring|process)\'',
+					'\/symfony\/(?!console|filesystem|finder|polyfill-mbstring|process|var-dumper)\'',
 					'\/composer\/spdx-licenses\/',
 					'\/Composer\/(?:Command\/|Compiler\.php|Console\/|Downloader\/Pear|Installer\/Pear|Question\/|Repository\/Pear|SelfUpdate\/)',
 					'\/(?:dealerdirect|squizlabs|wimg)\/',
@@ -172,6 +172,16 @@ $finder
 	->in(WP_CLI_VENDOR_DIR . '/symfony/polyfill-ctype')
 	->in(WP_CLI_VENDOR_DIR . '/symfony/polyfill-mbstring')
 	->in(WP_CLI_VENDOR_DIR . '/symfony/process')
+
+	//all part of psych
+	->in(WP_CLI_VENDOR_DIR . '/symfony/console')
+	->in(WP_CLI_VENDOR_DIR . '/symfony/var-dumper')
+	->in(WP_CLI_VENDOR_DIR . '/nikic')
+	->in(WP_CLI_VENDOR_DIR . '/dnoegel')
+	->in(WP_CLI_VENDOR_DIR .'/jakub-onderka')
+	->in(WP_CLI_VENDOR_DIR . '/psy')
+
+
 	->notName('behat-tags.php')
 	->notPath('#(?:[^/]+-command|php-cli-tools)/vendor/#') // For running locally, in case have composer installed or symlinked them.
 	->exclude('examples')
@@ -197,7 +207,6 @@ if ( 'cli' === BUILD ) {
 		->in(WP_CLI_VENDOR_DIR . '/nb/oxymel')
 		->in(WP_CLI_VENDOR_DIR . '/psr')
 		->in(WP_CLI_VENDOR_DIR . '/seld')
-		->in(WP_CLI_VENDOR_DIR . '/symfony/console')
 		->in(WP_CLI_VENDOR_DIR . '/symfony/filesystem')
 		->in(WP_CLI_VENDOR_DIR . '/justinrainbow/json-schema')
 		->in(WP_CLI_VENDOR_DIR . '/gettext')
