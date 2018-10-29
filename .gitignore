@@ -11,3 +11,4 @@ PHAR_BUILD_VERSION
 /PHP_Codesniffer-VariableAnalysis
 .*.swp
 *.log
+.idea
