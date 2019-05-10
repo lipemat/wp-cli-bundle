@@ -26,6 +26,7 @@ bash ./utils/update-phar <output directory> <version>
 Example
 ```
 bash ./utils/update-phar E:/OneDrive/scripts/wordpress 2.2.0.2-windows
+```
 
 ------------------------------------------------------------
 The current stable release is [version 2.1.0](https://make.wordpress.org/cli/2018/12/18/wp-cli-v2-1-0-release-notes/). For announcements, follow [@wpcli on Twitter](https://twitter.com/wpcli) or [sign up for email updates](https://make.wordpress.org/cli/subscribe/). [Check out the roadmap](https://make.wordpress.org/cli/handbook/roadmap/) for an overview of what's planned for upcoming releases.
