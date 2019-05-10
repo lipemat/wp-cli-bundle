@@ -6,8 +6,10 @@
 
 set -ex
 
-version="same"
-
+version=$2
+if [[""=${version}]]; then
+	version="same"
+fi
 current_rev=$(git rev-parse HEAD)
 current_rev=${current_rev:0:10}
 
