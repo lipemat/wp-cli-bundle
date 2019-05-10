@@ -42,6 +42,9 @@ $current_version = trim( file_get_contents( WP_CLI_ROOT . '/VERSION' ) );
 if ( isset( $runtime_config['version'] ) ) {
 	$new_version = $runtime_config['version'];
 	$new_version = Utils\increment_version( $current_version, $new_version );
+	if ( strpos( $new_version, 'windows' ) === false ) {
+		$new_version .= '-windows';
+	}
 
 	if ( isset( $runtime_config['store-version'] ) && $runtime_config['store-version'] ) {
 		file_put_contents( WP_CLI_ROOT . '/VERSION', $new_version );
