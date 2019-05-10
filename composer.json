@@ -7,6 +7,12 @@
     ],
     "homepage": "https://wp-cli.org",
     "license": "MIT",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/wp-cli/restful"
+        }
+    ],
     "require": {
         "php": ">=5.4",
         "psy/psysh": "^0.9.9",
@@ -27,6 +33,7 @@
         "wp-cli/maintenance-mode-command": "^2",
         "wp-cli/media-command": "^2",
         "wp-cli/package-command": "^2",
+        "wp-cli/restful": "^0.2.0",
         "wp-cli/rewrite-command": "^2",
         "wp-cli/role-command": "^2",
         "wp-cli/scaffold-command": "^2",
