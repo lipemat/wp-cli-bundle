@@ -10,7 +10,7 @@
     "repositories": [
         {
             "type": "vcs",
-            "url": "https://github.com/wp-cli/restful"
+            "url": "https://github.com/lipemat/restful"
         }
     ],
     "require": {
@@ -33,8 +33,9 @@
         "wp-cli/language-command": "^2",
         "wp-cli/maintenance-mode-command": "^2",
         "wp-cli/media-command": "^2",
-        "wp-cli/restful": "^0.2.0",
         "wp-cli/package-command": "^2.1",
+        "wp-cli/restful": "^0.2.0.1",
+        "wp-cli/rewrite-command": "^2",
         "wp-cli/role-command": "^2",
         "wp-cli/scaffold-command": "^2",
         "wp-cli/search-replace-command": "^2",
@@ -42,7 +43,7 @@
         "wp-cli/shell-command": "^2",
         "wp-cli/super-admin-command": "^2",
         "wp-cli/widget-command": "^2",
-        "wp-cli/wp-cli": "dev-master"
+        "wp-cli/wp-cli": "^2"
     },
     "require-dev": {
         "roave/security-advisories": "dev-latest",
