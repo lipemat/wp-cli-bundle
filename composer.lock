@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "750b9e01d07bfdccbbb78fdb919c8974",
+    "content-hash": "642cf141123e35e55f3ec3ff5dbd4bec",
     "packages": [
         {
             "name": "composer/ca-bundle",
@@ -266,16 +266,16 @@
         },
         {
             "name": "composer/xdebug-handler",
-            "version": "1.3.2",
+            "version": "1.3.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/xdebug-handler.git",
-                "reference": "d17708133b6c276d6e42ef887a877866b909d892"
+                "reference": "46867cbf8ca9fb8d60c506895449eb799db1184f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/xdebug-handler/zipball/d17708133b6c276d6e42ef887a877866b909d892",
-                "reference": "d17708133b6c276d6e42ef887a877866b909d892",
+                "url": "https://api.github.com/repos/composer/xdebug-handler/zipball/46867cbf8ca9fb8d60c506895449eb799db1184f",
+                "reference": "46867cbf8ca9fb8d60c506895449eb799db1184f",
                 "shasum": ""
             },
             "require": {
@@ -306,7 +306,7 @@
                 "Xdebug",
                 "performance"
             ],
-            "time": "2019-01-28T20:25:53+00:00"
+            "time": "2019-05-27T17:52:04+00:00"
         },
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -618,16 +618,16 @@
         },
         {
             "name": "mck89/peast",
-            "version": "v1.9.1",
+            "version": "v1.9.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mck89/peast.git",
-                "reference": "f4ce80caea99a894574f15b6bec50c05250b7a83"
+                "reference": "7c9e487a0bb2410b3b7f27e8274cd04248b68197"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mck89/peast/zipball/f4ce80caea99a894574f15b6bec50c05250b7a83",
-                "reference": "f4ce80caea99a894574f15b6bec50c05250b7a83",
+                "url": "https://api.github.com/repos/mck89/peast/zipball/7c9e487a0bb2410b3b7f27e8274cd04248b68197",
+                "reference": "7c9e487a0bb2410b3b7f27e8274cd04248b68197",
                 "shasum": ""
             },
             "require": {
@@ -639,7 +639,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.9.1-dev"
+                    "dev-master": "1.9.2-dev"
                 }
             },
             "autoload": {
@@ -659,7 +659,7 @@
                 }
             ],
             "description": "Peast is PHP library that generates AST for JavaScript code",
-            "time": "2019-01-16T11:24:32+00:00"
+            "time": "2019-05-24T16:47:14+00:00"
         },
         {
             "name": "mustache/mustache",
@@ -1708,21 +1708,21 @@
         },
         {
             "name": "wp-cli/core-command",
-            "version": "v2.0.5",
+            "version": "v2.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wp-cli/core-command.git",
-                "reference": "0b5c60d76d34a7f3b8e488536526872e1573c82d"
+                "reference": "14634828e559f69e2525fa9489635f301783aee8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wp-cli/core-command/zipball/0b5c60d76d34a7f3b8e488536526872e1573c82d",
-                "reference": "0b5c60d76d34a7f3b8e488536526872e1573c82d",
+                "url": "https://api.github.com/repos/wp-cli/core-command/zipball/14634828e559f69e2525fa9489635f301783aee8",
+                "reference": "14634828e559f69e2525fa9489635f301783aee8",
                 "shasum": ""
             },
             "require": {
                 "composer/semver": "^1.4",
-                "wp-cli/wp-cli": "dev-master as v2.2.0"
+                "wp-cli/wp-cli": "^2.2"
             },
             "require-dev": {
                 "wp-cli/checksum-command": "^1 || ^2",
@@ -1771,7 +1771,7 @@
             ],
             "description": "Downloads, installs, updates, and manages a WordPress installation.",
             "homepage": "https://github.com/wp-cli/core-command",
-            "time": "2019-04-24T21:03:08+00:00"
+            "time": "2019-04-25T05:45:44+00:00"
         },
         {
             "name": "wp-cli/cron-command",
@@ -2836,22 +2836,41 @@
         },
         {
             "name": "wp-cli/restful",
-            "version": "v0.2.0",
+            "version": "v0.2.0.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/wp-cli/restful.git",
-                "reference": "ca563c273071ec86ea6a28d8a359f89ac0307d5e"
+                "url": "https://github.com/lipemat/restful.git",
+                "reference": "7e3b9a7840b4e9d70c4a7ed5a2a7882cbc3e933a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wp-cli/restful/zipball/ca563c273071ec86ea6a28d8a359f89ac0307d5e",
-                "reference": "ca563c273071ec86ea6a28d8a359f89ac0307d5e",
+                "url": "https://api.github.com/repos/lipemat/restful/zipball/7e3b9a7840b4e9d70c4a7ed5a2a7882cbc3e933a",
+                "reference": "7e3b9a7840b4e9d70c4a7ed5a2a7882cbc3e933a",
                 "shasum": ""
+            },
+            "require": {
+                "wp-cli/wp-cli": "*"
             },
             "require-dev": {
                 "behat/behat": "~2.5"
             },
-            "type": "library",
+            "type": "wp-cli-package",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.x-dev"
+                },
+                "readme": {
+                    "package_description": {
+                        "post": "bin/readme-stubs/package-description-post.md"
+                    },
+                    "using": {
+                        "body": "bin/readme-stubs/using.md"
+                    },
+                    "installing": {
+                        "body": "bin/readme-stubs/installing.md"
+                    }
+                }
+            },
             "autoload": {
                 "files": [
                     "wp-rest-cli.php"
@@ -2868,10 +2887,9 @@
             ],
             "description": "Unlock the potential of the WP REST API at the command line.",
             "support": {
-                "source": "https://github.com/wp-cli/restful/tree/v0.2.0",
-                "issues": "https://github.com/wp-cli/restful/issues"
+                "source": "https://github.com/lipemat/restful/tree/v0.2.0.1"
             },
-            "time": "2016-07-19T14:56:00+00:00"
+            "time": "2019-05-31T14:30:07+00:00"
         },
         {
             "name": "wp-cli/rewrite-command",
@@ -3339,16 +3357,16 @@
         },
         {
             "name": "wp-cli/wp-cli",
-            "version": "dev-master",
+            "version": "v2.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wp-cli/wp-cli.git",
-                "reference": "c297010763fd4568eb8fbc57e77e46afa60259db"
+                "reference": "193f08f48585326bc1f1648349201531eeda2ee5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wp-cli/wp-cli/zipball/c297010763fd4568eb8fbc57e77e46afa60259db",
-                "reference": "c297010763fd4568eb8fbc57e77e46afa60259db",
+                "url": "https://api.github.com/repos/wp-cli/wp-cli/zipball/193f08f48585326bc1f1648349201531eeda2ee5",
+                "reference": "193f08f48585326bc1f1648349201531eeda2ee5",
                 "shasum": ""
             },
             "require": {
@@ -3397,7 +3415,7 @@
                 "cli",
                 "wordpress"
             ],
-            "time": "2019-05-07T12:59:51+00:00"
+            "time": "2019-04-25T05:38:33+00:00"
         },
         {
             "name": "wp-cli/wp-config-transformer",
@@ -4286,12 +4304,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Roave/SecurityAdvisories.git",
-                "reference": "2149b00d8c04ccbc71f38a261d0129d5b032b5df"
+                "reference": "4c0ba8a35f1f12dd9236452e9fae4346b0bf2a56"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/2149b00d8c04ccbc71f38a261d0129d5b032b5df",
-                "reference": "2149b00d8c04ccbc71f38a261d0129d5b032b5df",
+                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/4c0ba8a35f1f12dd9236452e9fae4346b0bf2a56",
+                "reference": "4c0ba8a35f1f12dd9236452e9fae4346b0bf2a56",
                 "shasum": ""
             },
             "conflict": {
@@ -4309,7 +4327,7 @@
                 "cart2quote/module-quotation": ">=4.1.6,<=4.4.5|>=5,<5.4.4",
                 "cartalyst/sentry": "<=2.1.6",
                 "codeigniter/framework": "<=3.0.6",
-                "composer/composer": "<=1.0.0-alpha11",
+                "composer/composer": "<=1-alpha.11",
                 "contao-components/mediaelement": ">=2.14.2,<2.21.1",
                 "contao/core": ">=2,<3.5.39",
                 "contao/core-bundle": ">=4,<4.4.39|>=4.5,<4.7.5",
@@ -4326,8 +4344,8 @@
                 "doctrine/mongodb-odm-bundle": ">=2,<3.0.1",
                 "doctrine/orm": ">=2,<2.4.8|>=2.5,<2.5.1",
                 "dompdf/dompdf": ">=0.6,<0.6.2",
-                "drupal/core": ">=7,<7.65|>=8,<8.5.14|>=8.6,<8.6.14",
-                "drupal/drupal": ">=7,<7.65|>=8,<8.5.14|>=8.6,<8.6.14",
+                "drupal/core": ">=7,<7.67|>=8,<8.6.16|>=8.7,<8.7.1",
+                "drupal/drupal": ">=7,<7.67|>=8,<8.6.16|>=8.7,<8.7.1",
                 "erusev/parsedown": "<1.7.2",
                 "ezsystems/ezpublish-kernel": ">=5.3,<5.3.12.1|>=5.4,<5.4.13.1|>=6,<6.7.9.1|>=6.8,<6.13.5.1|>=7,<7.2.4.1|>=7.3,<7.3.2.1",
                 "ezsystems/ezpublish-legacy": ">=5.3,<5.3.12.6|>=5.4,<5.4.12.3|>=2011,<2017.12.4.3|>=2018.6,<2018.6.1.4|>=2018.9,<2018.9.1.3",
@@ -4341,7 +4359,7 @@
                 "fuel/core": "<1.8.1",
                 "gree/jose": "<=2.2",
                 "gregwar/rst": "<1.0.3",
-                "guzzlehttp/guzzle": ">=6,<6.2.1|>=4.0.0-rc2,<4.2.4|>=5,<5.3.1",
+                "guzzlehttp/guzzle": ">=4-rc.2,<4.2.4|>=5,<5.3.1|>=6,<6.2.1",
                 "illuminate/auth": ">=4,<4.0.99|>=4.1,<=4.1.31|>=4.2,<=4.2.22|>=5,<=5.0.35|>=5.1,<=5.1.46|>=5.2,<=5.2.45|>=5.3,<=5.3.31|>=5.4,<=5.4.36|>=5.5,<5.5.10",
                 "illuminate/cookie": ">=4,<=4.0.11|>=4.1,<=4.1.31|>=4.2,<=4.2.22|>=5,<=5.0.35|>=5.1,<=5.1.46|>=5.2,<=5.2.45|>=5.3,<=5.3.31|>=5.4,<=5.4.36|>=5.5,<5.5.42|>=5.6,<5.6.30",
                 "illuminate/database": ">=4,<4.0.99|>=4.1,<4.1.29",
@@ -4376,7 +4394,7 @@
                 "phpunit/phpunit": ">=4.8.19,<4.8.28|>=5.0.10,<5.6.3",
                 "phpwhois/phpwhois": "<=4.2.5",
                 "phpxmlrpc/extras": "<0.6.1",
-                "propel/propel": ">=2.0.0-alpha1,<=2.0.0-alpha7",
+                "propel/propel": ">=2-alpha.1,<=2-alpha.7",
                 "propel/propel1": ">=1,<=1.7.1",
                 "pusher/pusher-php-server": "<2.2.1",
                 "robrichards/xmlseclibs": ">=1,<3.0.2",
@@ -4400,7 +4418,9 @@
                 "stormpath/sdk": ">=0,<9.9.99",
                 "swiftmailer/swiftmailer": ">=4,<5.4.5",
                 "sylius/admin-bundle": ">=1,<1.0.17|>=1.1,<1.1.9|>=1.2,<1.2.2",
-                "sylius/sylius": ">=1,<1.0.17|>=1.1,<1.1.9|>=1.2,<1.2.2",
+                "sylius/grid": ">=1,<1.1.19|>=1.2,<1.2.18|>=1.3,<1.3.13|>=1.4,<1.4.5|>=1.5,<1.5.1",
+                "sylius/grid-bundle": ">=1,<1.1.19|>=1.2,<1.2.18|>=1.3,<1.3.13|>=1.4,<1.4.5|>=1.5,<1.5.1",
+                "sylius/sylius": ">=1,<1.1.18|>=1.2,<1.2.17|>=1.3,<1.3.12|>=1.4,<1.4.4",
                 "symfony/cache": ">=3.2,<3.4.26|>=4,<4.1.12|>=4.2,<4.2.7",
                 "symfony/dependency-injection": ">=2,<2.0.17|>=2.7,<2.7.51|>=2.8,<2.8.50|>=3,<3.4.26|>=4,<4.1.12|>=4.2,<4.2.7",
                 "symfony/form": ">=2.3,<2.3.35|>=2.4,<2.6.12|>=2.7,<2.7.50|>=2.8,<2.8.49|>=3,<3.4.20|>=4,<4.0.15|>=4.1,<4.1.9|>=4.2,<4.2.1",
@@ -4427,7 +4447,7 @@
                 "symfony/yaml": ">=2,<2.0.22|>=2.1,<2.1.7",
                 "tecnickcom/tcpdf": "<6.2.22",
                 "thelia/backoffice-default-template": ">=2.1,<2.1.2",
-                "thelia/thelia": ">=2.1,<2.1.2|>=2.1.0-beta1,<2.1.3",
+                "thelia/thelia": ">=2.1-beta.1,<2.1.3",
                 "theonedemon/phpwhois": "<=4.2.5",
                 "titon/framework": ">=0,<9.9.99",
                 "truckersmp/phpwhois": "<=4.3.1",
@@ -4487,7 +4507,7 @@
                 }
             ],
             "description": "Prevents installation of composer packages with known security vulnerabilities: no API, simply require it",
-            "time": "2019-05-08T13:51:25+00:00"
+            "time": "2019-05-23T20:42:12+00:00"
         },
         {
             "name": "sebastian/comparator",
@@ -5274,16 +5294,16 @@
         },
         {
             "name": "wp-coding-standards/wpcs",
-            "version": "2.1.0",
+            "version": "2.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards.git",
-                "reference": "8c7a2e7682de9ef5955251874b639deda51ef470"
+                "reference": "bd9c33152115e6741e3510ff7189605b35167908"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/WordPress-Coding-Standards/WordPress-Coding-Standards/zipball/8c7a2e7682de9ef5955251874b639deda51ef470",
-                "reference": "8c7a2e7682de9ef5955251874b639deda51ef470",
+                "url": "https://api.github.com/repos/WordPress-Coding-Standards/WordPress-Coding-Standards/zipball/bd9c33152115e6741e3510ff7189605b35167908",
+                "reference": "bd9c33152115e6741e3510ff7189605b35167908",
                 "shasum": ""
             },
             "require": {
@@ -5315,13 +5335,12 @@
                 "standards",
                 "wordpress"
             ],
-            "time": "2019-04-08T10:53:57+00:00"
+            "time": "2019-05-21T02:50:00+00:00"
         }
     ],
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "wp-cli/wp-cli": 20,
         "roave/security-advisories": 20
     },
     "prefer-stable": true,
