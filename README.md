@@ -11,7 +11,7 @@ Forked with the following customizations:
 1. Support `wp shell` on windows.
 2. Pass a custom output directory for the bundled `wp-cli.phar` file.
 3. Pass a custom version to the bundled `wp-cli.phar` file.
-3. Support `wp rest` commands from [wp-restful](https://github.com/wp-cli/restful).
+3. Support `wp rest` commands from [wp-restful](https://github.com/lipemat/restful).
 
 --------------------------------------------------------------------------------------------------------------------------------------
 
