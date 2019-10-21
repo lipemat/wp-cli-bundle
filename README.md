@@ -1,7 +1,12 @@
 WP-CLI Bundle
 ======
-
 Bundle WP-CLI into a phar. 
+
+<p>
+<a href="https://github.com/lipemat/wp-cli-bundle/releases/latest">
+<img src="https://img.shields.io/github/v/tag/lipemat/wp-cli-bundle?label=version"/>
+</a>
+</p>
 
 --------------------------------------------------------------
 
@@ -14,6 +19,8 @@ Forked with the following customizations:
 3. Support `wp rest` commands from [wp-restful](https://github.com/lipemat/restful).
 
 --------------------------------------------------------------------------------------------------------------------------------------
+### Downloading `wp-cli.phar`
+You may download that <a href="https://github.com/lipemat/wp-cli-bundle/releases/latest/download/wp-cli.phar">latest wp-cli.phar here</a> or previous versions from the <a href="https://github.com/lipemat/wp-cli-bundle/releases/">Releases section</a>.
 
 ### Building a `wp-cli.phar`
 1. Clone or download this repo.
@@ -25,7 +32,7 @@ bash ./utils/update-phar <output directory> <version>
 ```
 Example
 ```
-bash ./utils/update-phar E:/OneDrive/scripts/wordpress 2.2.0.2-windows
+bash ./utils/update-phar E:/OneDrive/scripts/wordpress 2.3.0-windows
 ```
 
 -------------------------------------------------------------------
