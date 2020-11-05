@@ -191,9 +191,8 @@ $finder
 	->in(WP_CLI_VENDOR_DIR . '/symfony/var-dumper')
 	->in(WP_CLI_VENDOR_DIR . '/nikic')
 	->in(WP_CLI_VENDOR_DIR . '/dnoegel')
-	->in(WP_CLI_VENDOR_DIR .'/jakub-onderka')
 	->in(WP_CLI_VENDOR_DIR . '/psy')
-
+	->in( WP_CLI_VENDOR_DIR . '/myclabs/deep-copy' )
 	->notName( 'behat-tags.php' )
 	->notPath( '#(?:[^/]+-command|php-cli-tools)/vendor/#' ) // For running locally, in case have composer installed or symlinked them.
 	->exclude( 'examples' )

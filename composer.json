@@ -14,9 +14,8 @@
         }
     ],
     "require": {
-        "php": ">=5.4",
-        "psy/psysh": "^0.9.9",
-        "cweagans/composer-patches": "^1.6",
+        "php": ">=5.6",
+        "psy/psysh": "^0.10.4",
         "wp-cli/cache-command": "^2",
         "wp-cli/checksum-command": "^2",
         "wp-cli/config-command": "^2",
@@ -43,7 +42,7 @@
         "wp-cli/shell-command": "^2",
         "wp-cli/super-admin-command": "^2",
         "wp-cli/widget-command": "^2",
-        "wp-cli/wp-cli": "^2.4"
+        "wp-cli/wp-cli": "dev-master"
     },
     "require-dev": {
         "roave/security-advisories": "dev-master",
@@ -54,17 +53,15 @@
     },
     "config": {
         "platform": {
-            "php": "5.4",
-            "ext-posix": "1.0.4"
+            "php": "5.6"
         },
         "process-timeout": 7200,
         "sort-packages": true
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "2.1.x-dev"
-        },
-        "enable-patching": true
+            "dev-master": "2.5.x-dev"
+        }
     },
     "autoload-dev": {
         "psr-4": {
@@ -74,9 +71,6 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "scripts": {
-        "post-install-cmd": [
-            "./utils/git-setup-pre-commit-hook"
-        ],
         "behat": "run-behat-tests",
         "behat-rerun": "rerun-behat-tests",
         "lint": "run-linter-tests",
