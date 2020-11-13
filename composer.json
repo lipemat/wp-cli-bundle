@@ -10,7 +10,8 @@
     "repositories": [
         {
             "type": "vcs",
-            "url": "https://github.com/lipemat/restful"
+            "url": "https://github.com/lipemat/restful",
+            "canonical": false
         }
     ],
     "require": {
