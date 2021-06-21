@@ -94,6 +94,10 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/wp-cli/wp-cli-tests" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/wp-cli/wp-config-transformer" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/wp-coding-standards/wpcs" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/cweagans/composer-patches" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/jakub-onderka/php-parallel-lint" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/jakub-onderka/php-console-highlighter" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/jakub-onderka/php-console-color" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
