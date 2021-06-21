@@ -13,7 +13,7 @@ Bundle WP-CLI into a phar.
 ### This version was forked to keep it compatible with Windows for things like `wp shell`
 
 Forked with the following customizations:
-1. Support `wp shell` on windows.
+1. Support `wp shell` on Windows.
 2. Pass a custom output directory for the bundled `wp-cli.phar` file.
 3. Pass a custom version to the bundled `wp-cli.phar` file.
 3. Support `wp rest` commands from [wp-restful](https://github.com/lipemat/restful).
@@ -32,7 +32,7 @@ bash ./utils/update-phar <output directory> <version>
 ```
 Example
 ```
-bash ./utils/update-phar E:/scripts/wordpress 2.4.1-windows
+bash ./utils/update-phar E:/scripts/wordpress 2.5.0-windows
 ```
 
 -------------------------------------------------------------------
