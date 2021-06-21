@@ -65,7 +65,11 @@ function add_file( $phar, $path ) {
 			if ( 'cli' === BUILD ) {
 				$strips = [
 					'\/(?:behat|composer|gherkin)\/src\/',
+					'\/behat\/',
 					'\/phpunit\/',
+					'\/phpspec\/',
+					'\/sebastian\/',
+					'\/php-parallel-lint\/',
 					'\/nb\/oxymel\/',
 					'-command\/src\/',
 					'\/wp-cli\/[^\n]+?-command\/',
@@ -75,15 +79,17 @@ function add_file( $phar, $path ) {
 			} else {
 				$strips = [
 					'\/(?:behat|gherkin)\/src\/',
+					'\/behat\/',
 					'\/phpunit\/',
 					'\/symfony\/(?!console|filesystem|finder|polyfill-mbstring|process|var-dumper)\'',
 					'\/composer\/spdx-licenses\/',
 					'\/Composer\/(?:Command\/|Compiler\.php|Console\/|Downloader\/Pear|Installer\/Pear|Question\/|Repository\/Pear|SelfUpdate\/)',
-					'\/(?:dealerdirect|squizlabs|wimg)\/',
+					'\/(?:dealerdirect|myclabs|squizlabs|wimg)\/',
+					'\/yoast\/',
 				];
 			}
 			$strip_res = array_map(
-				function ( $v ) {
+				static function ( $v ) {
 						return '/^[^,\n]+?' . $v . '[^,\n]+?, *\n/m';
 				},
 				$strips
@@ -175,7 +181,7 @@ $finder = new Finder();
 $finder
 	->files()
 	->ignoreVCS( true )
-	->name( '*.php' )
+	->name( '/\.*.php8?/' )
 	->in( WP_CLI_ROOT . '/php' )
 	->in( WP_CLI_BUNDLE_ROOT . '/php' )
 	->in( WP_CLI_VENDOR_DIR . '/mustache' )
@@ -190,22 +196,33 @@ $finder
 	->in(WP_CLI_VENDOR_DIR . '/symfony/console')
 	->in(WP_CLI_VENDOR_DIR . '/symfony/var-dumper')
 	->in(WP_CLI_VENDOR_DIR . '/nikic')
-	->in(WP_CLI_VENDOR_DIR . '/dnoegel')
 	->in(WP_CLI_VENDOR_DIR . '/psy')
 	->in( WP_CLI_VENDOR_DIR . '/myclabs/deep-copy' )
 	->notName( 'behat-tags.php' )
 	->notPath( '#(?:[^/]+-command|php-cli-tools)/vendor/#' ) // For running locally, in case have composer installed or symlinked them.
+	->exclude( 'config' )
+	->exclude( 'debug' )
+	->exclude( 'dependency-injection' )
+	->exclude( 'event-dispatcher' )
+	->exclude( 'translation' )
+	->exclude( 'yaml' )
 	->exclude( 'examples' )
 	->exclude( 'features' )
 	->exclude( 'test' )
 	->exclude( 'tests' )
 	->exclude( 'Test' )
 	->exclude( 'Tests' );
+if ( is_dir( WP_CLI_VENDOR_DIR . '/react' ) ) {
+	$finder
+		->in( WP_CLI_VENDOR_DIR . '/react' );
+}
 if ( 'cli' === BUILD ) {
 	$finder
 		->in( WP_CLI_VENDOR_DIR . '/wp-cli/mustangostang-spyc' )
 		->in( WP_CLI_VENDOR_DIR . '/wp-cli/php-cli-tools' )
 		->in( WP_CLI_VENDOR_DIR . '/seld/cli-prompt' )
+		->exclude( 'console' )
+		->exclude( 'filesystem' )
 		->exclude( 'composer/ca-bundle' )
 		->exclude( 'composer/semver' )
 		->exclude( 'composer/src' )

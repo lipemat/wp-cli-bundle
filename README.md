@@ -32,7 +32,7 @@ bash ./utils/update-phar <output directory> <version>
 ```
 Example
 ```
-bash ./utils/update-phar E:/scripts/wordpress 2.4.1-windows
+bash ./utils/update-phar E:/scripts/wordpress 2.4.2-windows
 ```
 
 -------------------------------------------------------------------
