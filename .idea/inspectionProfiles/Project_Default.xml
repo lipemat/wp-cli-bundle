@@ -97,8 +97,7 @@
     <inspection_tool class="PhpCSValidationInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
       <option name="CODING_STANDARD" value="Custom" />
       <option name="CUSTOM_RULESET_PATH" value="$PROJECT_DIR$/phpcs.xml.dist" />
-      <option name="USE_INSTALLED_PATHS" value="true" />
-      <option name="INSTALLED_PATHS" value="$PROJECT_DIR$/vendor/phpcompatibility/php-compatibility/PHPCompatibility" />
+      <option name="INSTALLED_PATHS" value="E:\SVN\wp-cli-bundle\vendor\squizlabs\php_codesniffer" />
       <option name="EXTENSIONS" value="php,js,css,inc" />
     </inspection_tool>
     <inspection_tool class="SecurityAdvisoriesInspection" enabled="true" level="WARNING" enabled_by_default="true">

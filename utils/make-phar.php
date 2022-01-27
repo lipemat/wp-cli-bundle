@@ -199,8 +199,6 @@ $finder
 	->in( WP_CLI_VENDOR_DIR . '/symfony/console' )
 	->in( WP_CLI_VENDOR_DIR . '/symfony/var-dumper' )
 	->in( WP_CLI_VENDOR_DIR . '/nikic' )
-	->in( WP_CLI_VENDOR_DIR . '/dnoegel' )
-	->in( WP_CLI_VENDOR_DIR . '/jakub-onderka' )
 	->in( WP_CLI_VENDOR_DIR . '/psy' )
 
 
