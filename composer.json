@@ -17,7 +17,7 @@
     "require": {
         "php": ">=7.0.8",
         "composer/composer": "^1.10.23 || ^2.2.3",
-        "psy/psysh": "^0.10.12",
+        "psy/psysh": "^0.11.8",
         "wp-cli/cache-command": "^2",
         "wp-cli/checksum-command": "^2.1",
         "wp-cli/config-command": "^2.1",
