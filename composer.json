@@ -15,7 +15,7 @@
     }
   ],
   "require": {
-    "php": ">=7.0.8",
+    "php": ">=7.2.0",
     "psy/psysh": "^0.11.22",
     "wp-cli/restful": "dev-main",
     "wp-cli/cache-command": "^2",
@@ -58,7 +58,7 @@
       "johnpbloch/wordpress-core-installer": true
     },
     "platform": {
-      "php": "7.0.8"
+      "php": "7.2.0"
     },
     "process-timeout": 7200,
     "sort-packages": true

@@ -3,9 +3,11 @@ WP-CLI Bundle
 Bundle WP-CLI into a phar.
 
 <p>
-<a href="https://github.com/lipemat/wp-cli-bundle/releases/latest">
-<img alt="Package Version" src="https://img.shields.io/github/v/tag/lipemat/wp-cli-bundle?label=version"/>
-</a>
+	<a href="https://github.com/lipemat/wp-cli-bundle/releases/latest">
+		<img alt="Package Version" src="https://img.shields.io/github/v/tag/lipemat/wp-cli-bundle?label=version"/>
+	</a>
+ 	<img alt="WordPress" src="https://img.shields.io/badge/wordpress->=5.8.0-green.svg">
+  	<img alt="PHP" src="https://img.shields.io/badge/php->=7.2.0-brown.svg" />
 </p>
 
 
