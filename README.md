@@ -4,7 +4,7 @@ Bundle WP-CLI into a phar.
 
 <p>
 <a href="https://github.com/lipemat/wp-cli-bundle/releases/latest">
-<img src="https://img.shields.io/github/v/tag/lipemat/wp-cli-bundle?label=version"/>
+<img alt="Package Version" src="https://img.shields.io/github/v/tag/lipemat/wp-cli-bundle?label=version"/>
 </a>
 </p>
 
@@ -16,7 +16,7 @@ Forked with the following customizations:
 1. Support `wp shell` on Windows.
 2. Pass a custom output directory for the bundled `wp-cli.phar` file.
 3. Pass a custom version to the bundled `wp-cli.phar` file.
-3. Support `wp rest` commands from [wp-restful](https://github.com/lipemat/restful).
+4. Support `wp rest` commands from [wp-restful](https://github.com/lipemat/restful).
 
 --------------------------------------------------------------------------------------------------------------------------------------
 
