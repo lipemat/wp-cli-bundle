@@ -1,0 +1,7 @@
+{
+  "patches": {
+    "wp-cli/wp-cli": {
+      "Fix error display": ".patches/fix-error-display.patch"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+diff --git a/php/utils-wp.php b/php/utils-wp.php
+index bfdddec0..95dad971 100644
+--- a/php/utils-wp.php
++++ b/php/utils-wp.php
+@@ -78,9 +78,6 @@ function wp_debug_mode() {
+ 			ini_set( 'display_errors', 0 );
+ 		}
+ 	}
+-
+-	// XDebug already sends errors to STDERR.
+-	ini_set( 'display_errors', function_exists( 'xdebug_debug_zval' ) ? false : 'STDERR' );
+ }
+ // phpcs:enable
