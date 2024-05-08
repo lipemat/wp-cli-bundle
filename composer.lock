@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "94950523756501badc4e9edaad8f32f7",
+    "content-hash": "97ec61fb00a2461ef708273bae67dff1",
     "packages": [
         {
             "name": "composer/ca-bundle",
@@ -4283,13 +4283,13 @@
             "version": "dev-main",
             "source": {
                 "type": "git",
-                "url": "https://github.com/wp-cli/wp-cli.git",
-                "reference": "6d78633580dbec4856979210b597a1c9c687e163"
+                "url": "https://github.com/lipemat/wp-cli.git",
+                "reference": "0766806679e5ec2d8a2b3a0e9119a00085aef980"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wp-cli/wp-cli/zipball/6d78633580dbec4856979210b597a1c9c687e163",
-                "reference": "6d78633580dbec4856979210b597a1c9c687e163",
+                "url": "https://api.github.com/repos/lipemat/wp-cli/zipball/0766806679e5ec2d8a2b3a0e9119a00085aef980",
+                "reference": "0766806679e5ec2d8a2b3a0e9119a00085aef980",
                 "shasum": ""
             },
             "require": {
@@ -4332,7 +4332,35 @@
                     "php/class-wp-cli-command.php"
                 ]
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "scripts": {
+                "behat": [
+                    "run-behat-tests"
+                ],
+                "behat-rerun": [
+                    "rerun-behat-tests"
+                ],
+                "lint": [
+                    "run-linter-tests"
+                ],
+                "phpcs": [
+                    "run-phpcs-tests"
+                ],
+                "phpcbf": [
+                    "run-phpcbf-cleanup"
+                ],
+                "phpunit": [
+                    "run-php-unit-tests"
+                ],
+                "prepare-tests": [
+                    "install-package-tests"
+                ],
+                "test": [
+                    "@lint",
+                    "@phpcs",
+                    "@phpunit",
+                    "@behat"
+                ]
+            },
             "license": [
                 "MIT"
             ],
@@ -4343,11 +4371,11 @@
                 "wordpress"
             ],
             "support": {
-                "docs": "https://make.wordpress.org/cli/handbook/",
                 "issues": "https://github.com/wp-cli/wp-cli/issues",
-                "source": "https://github.com/wp-cli/wp-cli"
+                "source": "https://github.com/wp-cli/wp-cli",
+                "docs": "https://make.wordpress.org/cli/handbook/"
             },
-            "time": "2024-04-27T02:25:56+00:00"
+            "time": "2024-05-08T15:53:42+00:00"
         },
         {
             "name": "wp-cli/wp-config-transformer",
