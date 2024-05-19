@@ -1,0 +1,39 @@
+From 9a262f980f4cb5377785088fa3a84f98a284ef63 Mon Sep 17 00:00:00 2001
+From: Mat Lipe <mat@matlipe.com>
+Date: Wed, 8 May 2024 11:47:52 -0400
+Subject: [PATCH] Prevent missing file extensions from throwing errors
+
+https://github.com/wp-cli/wp-cli/pull/5947
+
+Some file URL do not include the common .zip extension and therefore are missing their extension when reaching the `import` method of `FileCache`.
+
+This issue is commonly seen with Premium plugins which use a custom URL to provide access to a keyed download file.
+
+Running `wp plugin update <name of premium plugin>` was throwing a "Warning: copy(-<version>.): Failed to open stream: Permission denied".
+
+Instead of assuming the extension is valid nor trying to guess the extension is `.zip` simply bypass the storing of cache when the extension is not available.
+---
+ php/WP_CLI/FileCache.php | 5 +++++
+ 1 file changed, 5 insertions(+)
+
+diff --git a/php/WP_CLI/FileCache.php b/php/WP_CLI/FileCache.php
+index ee5681e3b..09b27500d 100644
+--- a/php/WP_CLI/FileCache.php
++++ b/php/WP_CLI/FileCache.php
+@@ -157,12 +157,17 @@ public function read( $key, $ttl = null ) {
+ 	 *
+ 	 * @param string $key    cache key
+ 	 * @param string $source source filename
++	 *
+ 	 * @return bool
+ 	 */
+ 	public function import( $key, $source ) {
+ 		$filename = $this->prepare_write( $key );
+
+ 		if ( $filename ) {
++			$ext = pathinfo( $filename, PATHINFO_EXTENSION );
++			if ( '' === $ext ) {
++				return false;
++			}
+ 			return copy( $source, $filename ) && touch( $filename );
+ 		}
