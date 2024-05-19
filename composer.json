@@ -12,10 +12,6 @@
       "type": "vcs",
       "url": "https://github.com/wp-cli/restful",
       "canonical": false
-    },
-    {
-      "type": "vcs",
-      "url": "https://github.com/lipemat/wp-cli"
     }
   ],
   "require": {
