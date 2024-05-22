@@ -4,6 +4,7 @@ Date: Wed, 8 May 2024 11:47:52 -0400
 Subject: [PATCH] Prevent missing file extensions from throwing errors
 
 https://github.com/wp-cli/wp-cli/pull/5947
+https://github.com/wp-cli/wp-cli/pull/5951
 
 Some file URL do not include the common .zip extension and therefore are missing their extension when reaching the `import` method of `FileCache`.
 
