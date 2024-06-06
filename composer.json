@@ -15,7 +15,7 @@
     }
   ],
   "require": {
-    "php": ">=7.2.0",
+    "php": ">=7.4.0",
     "cweagans/composer-patches": "^1.7",
     "psy/psysh": "^0.11.22",
     "wp-cli/cache-command": "^2",
@@ -60,7 +60,7 @@
       "cweagans/composer-patches": true
     },
     "platform": {
-      "php": "7.2.0"
+      "php": "7.4.0"
     },
     "process-timeout": 7200,
     "sort-packages": true
