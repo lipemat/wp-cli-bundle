@@ -1,5 +1,8 @@
 {
   "patches": {
+    "psy/psysh": {
+      "Disable updates": ".patches/disable-psy-updates.patch"
+    },
     "wp-cli/wp-cli": {
       "Fix error display": ".patches/fix-error-display.patch"
     }
