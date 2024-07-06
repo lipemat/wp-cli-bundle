@@ -5,6 +5,9 @@
     },
     "wp-cli/wp-cli": {
       "Fix error display": ".patches/fix-error-display.patch"
+    },
+    "wp-cli/restful": {
+      "Null resource": ".patches/null-resource.patch"
     }
   }
 }

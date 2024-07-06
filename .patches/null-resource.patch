@@ -1,0 +1,13 @@
+diff --git a/inc/RestCommand.php b/inc/RestCommand.php
+index 9be1ef6..674e6db 100644
+--- a/inc/RestCommand.php
++++ b/inc/RestCommand.php
+@@ -520,7 +520,7 @@ EOT;
+ 	 * @return string
+ 	 */
+ 	private function get_base_route() {
+-		return substr( $this->route, 0, strlen( $this->route ) - strlen( $this->resource_identifier ) );
++		return substr( $this->route, 0, strlen( $this->route ) - strlen( $this->resource_identifier ?? '' ) );
+ 	}
+ 
+ 	/**
