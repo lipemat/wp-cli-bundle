@@ -3,6 +3,9 @@
     "psy/psysh": {
       "Disable updates": ".patches/disable-psy-updates.patch"
     },
+    "wp-cli/profile-command": {
+      "Null passed to str_replace": ".patches/null-profile.patch"
+    },
     "wp-cli/wp-cli": {
       "Fix error display": ".patches/fix-error-display.patch"
     },

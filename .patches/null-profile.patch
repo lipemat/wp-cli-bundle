@@ -1,0 +1,20 @@
+diff --git a/src/Formatter.php b/src/Formatter.php
+index d09101e..f1219d6 100644
+--- a/src/Formatter.php
++++ b/src/Formatter.php
+@@ -137,7 +137,14 @@ class Formatter {
+ 					$values[ $i ] = round( $value, 4 ) . 's';
+ 				}
+ 			}
+-			$table->addRow( $values );
++			$table->addRow(
++				array_map(
++					static function ( $value ) {
++								return null === $value ? '' : $value;
++					},
++					$values
++				)
++			);
+ 		}
+ 		if ( $include_total ) {
+ 			foreach ( $totals as $i => $value ) {
