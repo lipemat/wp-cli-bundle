@@ -1,7 +1,8 @@
 Feature: Requests integration with both v1 and v2
 
   # This test downgrades to WordPress 5.8, but the SQLite plugin requires 6.0+
-  @require-mysql
+  # WP-CLI 2.7 causes deprecation warnings on PHP 8.2
+  @require-mysql @less-than-php-8.2
   Scenario: Composer stack with Requests v1
     Given an empty directory
     And a composer.json file:
@@ -78,6 +79,10 @@ Feature: Requests integration with both v1 and v2
 
     Scenario: Current version with WordPress-bundled Requests v2
     Given a WP installation
+    # Switch themes because twentytwentyfive requires a version newer than 6.2
+    # and it would otherwise cause a fatal error further down.
+    And I try `wp theme install twentyten`
+    And I try `wp theme activate twentyten`
     And I run `wp core update --version=6.2 --force`
 
     When I run `wp core version`
@@ -104,7 +109,8 @@ Feature: Requests integration with both v1 and v2
       """
 
   # Uses `wp db create` which is not yet supported in SQLite.
-  @require-mysql
+  # Uses WP 6.1, which is not compatible with PHP 8.4 and causes warnings
+  @require-mysql @less-than-php-8.4
   Scenario: Composer stack with Requests v1 pulling wp-cli/wp-cli-bundle
     Given an empty directory
     And a composer.json file:
@@ -205,7 +211,8 @@ Feature: Requests integration with both v1 and v2
       """
 
     # This can throw deprecated warnings on PHP 8.1+.
-    When I try `vendor/bin/wp plugin install duplicate-post --activate`
+    # Also, using a specific version to avoid minimum WordPress version requirement warning.
+    When I try `vendor/bin/wp plugin install duplicate-post --version=4.2 --activate`
     Then STDOUT should contain:
       """
       Success: Installed 1 of 1 plugins.
