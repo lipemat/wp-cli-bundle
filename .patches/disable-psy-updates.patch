@@ -3,11 +3,11 @@ index b095d235..58078354 100644
 --- a/src/Configuration.php
 +++ b/src/Configuration.php
 @@ -108,7 +108,7 @@ class Configuration
-     private $warnOnMultipleConfigs = false;
-     private $colorMode = self::COLOR_MODE_AUTO;
-     private $interactiveMode = self::INTERACTIVE_MODE_AUTO;
--    private $updateCheck;
-+    private $updateCheck = 'never';
-     private $startupMessage;
-     private $forceArrayIndexes = false;
+     private bool $warnOnMultipleConfigs = false;
+     private string $colorMode = self::COLOR_MODE_AUTO;
+     private string $interactiveMode = self::INTERACTIVE_MODE_AUTO;
+-    private ?string $updateCheck = null;
++    private ?string $updateCheck = 'never';
+     private ?string $startupMessage = null;
+     private bool $forceArrayIndexes = false;
      /** @deprecated */
