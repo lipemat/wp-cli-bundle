@@ -1,0 +1,77 @@
+diff --git a/src/Mustache/Engine.php b/src/Mustache/Engine.php
+index 05c7f23c..8e53af78 100644
+--- a/src/Mustache/Engine.php
++++ b/src/Mustache/Engine.php
+@@ -741,7 +741,7 @@ public function loadLambda($source, $delims = null)
+      *
+      * @return Mustache_Template
+      */
+-    private function loadSource($source, Mustache_Cache $cache = null)
++    private function loadSource($source, ?Mustache_Cache $cache = null)
+     {
+         $className = $this->getTemplateClassName($source);
+
+diff --git a/src/Mustache/Exception/SyntaxException.php b/src/Mustache/Exception/SyntaxException.php
+index b1879a3d..4275ae55 100644
+--- a/src/Mustache/Exception/SyntaxException.php
++++ b/src/Mustache/Exception/SyntaxException.php
+@@ -21,7 +21,7 @@ class Mustache_Exception_SyntaxException extends LogicException implements Musta
+      * @param array     $token
+      * @param Exception $previous
+      */
+-    public function __construct($msg, array $token, Exception $previous = null)
++    public function __construct($msg, array $token, ?Exception $previous = null)
+     {
+         $this->token = $token;
+         if (version_compare(PHP_VERSION, '5.3.0', '>=')) {
+diff --git a/src/Mustache/Exception/UnknownFilterException.php b/src/Mustache/Exception/UnknownFilterException.php
+index 0651c173..f3721383 100644
+--- a/src/Mustache/Exception/UnknownFilterException.php
++++ b/src/Mustache/Exception/UnknownFilterException.php
+@@ -20,7 +20,7 @@ class Mustache_Exception_UnknownFilterException extends UnexpectedValueException
+      * @param string    $filterName
+      * @param Exception $previous
+      */
+-    public function __construct($filterName, Exception $previous = null)
++    public function __construct($filterName, ?Exception $previous = null)
+     {
+         $this->filterName = $filterName;
+         $message = sprintf('Unknown filter: %s', $filterName);
+diff --git a/src/Mustache/Exception/UnknownHelperException.php b/src/Mustache/Exception/UnknownHelperException.php
+index 193be782..a740728b 100644
+--- a/src/Mustache/Exception/UnknownHelperException.php
++++ b/src/Mustache/Exception/UnknownHelperException.php
+@@ -20,7 +20,7 @@ class Mustache_Exception_UnknownHelperException extends InvalidArgumentException
+      * @param string    $helperName
+      * @param Exception $previous
+      */
+-    public function __construct($helperName, Exception $previous = null)
++    public function __construct($helperName, ?Exception $previous = null)
+     {
+         $this->helperName = $helperName;
+         $message = sprintf('Unknown helper: %s', $helperName);
+diff --git a/src/Mustache/Exception/UnknownTemplateException.php b/src/Mustache/Exception/UnknownTemplateException.php
+index 32a778a5..ab2647f4 100644
+--- a/src/Mustache/Exception/UnknownTemplateException.php
++++ b/src/Mustache/Exception/UnknownTemplateException.php
+@@ -20,7 +20,7 @@ class Mustache_Exception_UnknownTemplateException extends InvalidArgumentExcepti
+      * @param string    $templateName
+      * @param Exception $previous
+      */
+-    public function __construct($templateName, Exception $previous = null)
++    public function __construct($templateName, ?Exception $previous = null)
+     {
+         $this->templateName = $templateName;
+         $message = sprintf('Unknown template: %s', $templateName);
+diff --git a/src/Mustache/Parser.php b/src/Mustache/Parser.php
+index 5db58244..ae35a8dd 100644
+--- a/src/Mustache/Parser.php
++++ b/src/Mustache/Parser.php
+@@ -72,7 +72,7 @@ public function setPragmas(array $pragmas)
+      *
+      * @return array Mustache Token parse tree
+      */
+-    private function buildTree(array &$tokens, array $parent = null)
++    private function buildTree(array &$tokens, ?array $parent = null)
+     {
+         $nodes = array();
