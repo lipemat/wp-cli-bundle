@@ -8,6 +8,6 @@ index bfdddec0..95dad971 100644
  	}
 -
 -	// XDebug already sends errors to STDERR.
--	ini_set( 'display_errors', function_exists( 'xdebug_debug_zval' ) ? false : 'STDERR' );
+-	ini_set( 'display_errors', function_exists( 'xdebug_debug_zval' ) ? false : 'stderr' );
  }
  // phpcs:enable
