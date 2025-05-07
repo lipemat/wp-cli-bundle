@@ -190,7 +190,8 @@ $finder
 	->name( '/\.*.php8?/' )
 	->in( WP_CLI_ROOT . '/php' )
 	->in( WP_CLI_BUNDLE_ROOT . '/php' )
-	->in( WP_CLI_VENDOR_DIR . '/mustache' )
+	->in( WP_CLI_VENDOR_DIR . '/wp-cli/mustache' )
+	->in( WP_CLI_VENDOR_DIR . '/wp-cli/process' )
 	->in( WP_CLI_VENDOR_DIR . '/eftec/bladeone' )
 	->in( WP_CLI_ROOT . '/bundle/rmccue/requests' )
 	->in( WP_CLI_VENDOR_DIR . '/composer' )
@@ -234,28 +235,30 @@ if ( 'cli' === BUILD ) {
 		->exclude( 'composer/spdx-licenses' );
 } else {
 	$finder
-		->in(WP_CLI_VENDOR_DIR . '/wp-cli')
-		->in(WP_CLI_VENDOR_DIR . '/nb/oxymel')
-		->in(WP_CLI_VENDOR_DIR . '/psr')
-		->in(WP_CLI_VENDOR_DIR . '/seld')
-		->in(WP_CLI_VENDOR_DIR . '/symfony/console')
-		->in(WP_CLI_VENDOR_DIR . '/symfony/filesystem')
-		->in(WP_CLI_VENDOR_DIR . '/justinrainbow/json-schema')
-		->in(WP_CLI_VENDOR_DIR . '/gettext')
-		->in(WP_CLI_VENDOR_DIR . '/mck89')
-		->exclude('demo')
-		->exclude('nb/oxymel/OxymelTest.php')
-		->exclude('composer/spdx-licenses')
-		->exclude('composer/composer/src/Composer/Command')
-		->exclude('composer/composer/src/Composer/Compiler.php')
-		->exclude('composer/composer/src/Composer/Console')
-		->exclude('composer/composer/src/Composer/Downloader/PearPackageExtractor.php') // Assuming Pear installation isn't supported by wp-cli.
-		->exclude('composer/composer/src/Composer/Installer/PearBinaryInstaller.php')
-		->exclude('composer/composer/src/Composer/Installer/PearInstaller.php')
-		->exclude('composer/composer/src/Composer/Question')
-		->exclude('composer/composer/src/Composer/Repository/Pear')
-		->exclude('composer/composer/src/Composer/SelfUpdate')
-		;
+		->in( WP_CLI_VENDOR_DIR . '/wp-cli' )
+		->in( WP_CLI_VENDOR_DIR . '/nb/oxymel' )
+		->in( WP_CLI_VENDOR_DIR . '/psr' )
+		->in( WP_CLI_VENDOR_DIR . '/seld' )
+		->in( WP_CLI_VENDOR_DIR . '/justinrainbow/json-schema' )
+		->in( WP_CLI_VENDOR_DIR . '/gettext' )
+		->in( WP_CLI_VENDOR_DIR . '/mck89' )
+		->exclude( 'demo' )
+		->exclude( 'nb/oxymel/OxymelTest.php' )
+		->exclude( 'composer/spdx-licenses' )
+		->exclude( 'composer/composer/src/Composer/Command' )
+		->exclude( 'composer/composer/src/Composer/Compiler.php' )
+		->exclude( 'composer/composer/src/Composer/Console' )
+		->exclude( 'composer/composer/src/Composer/Downloader/PearPackageExtractor.php' ) // Assuming Pear installation isn't supported by wp-cli.
+		->exclude( 'composer/composer/src/Composer/Installer/PearBinaryInstaller.php' )
+		->exclude( 'composer/composer/src/Composer/Installer/PearInstaller.php' )
+		->exclude( 'composer/composer/src/Composer/Question' )
+		->exclude( 'composer/composer/src/Composer/Repository/Pear' )
+		->exclude( 'composer/composer/src/Composer/SelfUpdate' );
+
+	// required by justinrainbow/json-schema v6+.
+	if ( is_dir( WP_CLI_VENDOR_DIR . '/marc-mabe/php-enum' ) ) {
+		$finder->in( WP_CLI_VENDOR_DIR . '/marc-mabe/php-enum' );
+	}
 }
 
 foreach ( $finder as $file ) {

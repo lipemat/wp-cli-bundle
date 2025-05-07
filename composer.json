@@ -37,6 +37,7 @@
     "wp-cli/package-command": "^2.1",
     "wp-cli/profile-command": "^2",
     "wp-cli/restful": "dev-main",
+    "wp-cli/process": "5.9.99",
     "wp-cli/rewrite-command": "^2",
     "wp-cli/role-command": "^2",
     "wp-cli/scaffold-command": "^2",
