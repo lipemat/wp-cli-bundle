@@ -7,7 +7,9 @@ index b095d235..58078354 100644
      private string $colorMode = self::COLOR_MODE_AUTO;
      private string $interactiveMode = self::INTERACTIVE_MODE_AUTO;
 -    private ?string $updateCheck = null;
+-    private ?string $updateManualCheck = null;
 +    private ?string $updateCheck = 'never';
++    private ?string $updateManualCheck = 'never';
      private ?string $startupMessage = null;
      private bool $forceArrayIndexes = false;
      /** @deprecated */
