@@ -11,6 +11,7 @@ PHAR_BUILD_VERSION
 phpunit.xml
 phpcs.xml
 .phpcs.xml
+/build
 
 # PHPStorm files
 # https://github.com/github/gitignore/blob/master/Global/JetBrains.gitignore

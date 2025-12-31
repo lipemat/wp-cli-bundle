@@ -18,6 +18,8 @@
     "php": ">=7.4.0",
     "cweagans/composer-patches": "^1.7",
     "psy/psysh": "^0.12.3",
+    "wp-cli/ability-command": "^1",
+    "wp-cli/block-command": "^1",
     "wp-cli/cache-command": "^2",
     "wp-cli/checksum-command": "^2.1",
     "wp-cli/config-command": "^2.1",
@@ -50,7 +52,7 @@
   },
   "require-dev": {
     "roave/security-advisories": "dev-latest",
-    "wp-cli/wp-cli-tests": "^4"
+    "wp-cli/wp-cli-tests": "^5"
   },
   "suggest": {
     "psy/psysh": "Enhanced `wp shell` functionality"
@@ -59,8 +61,10 @@
     "allow-plugins": {
       "dealerdirect/phpcodesniffer-composer-installer": true,
       "johnpbloch/wordpress-core-installer": true,
+      "phpstan/extension-installer": true,
       "cweagans/composer-patches": true
     },
+    "autoloader-suffix": "WpCliBundle",
     "platform": {
       "php": "7.4.0"
     },
@@ -85,12 +89,15 @@
     "behat-rerun": "rerun-behat-tests",
     "lint": "run-linter-tests",
     "phpcs": "run-phpcs-tests",
+    "phpstan": "run-phpstan-tests",
     "phpunit": "run-php-unit-tests",
+    "phpcbf": "run-phpcbf-cleanup",
     "placeholder": "value",
     "prepare-tests": "install-package-tests",
     "test": [
       "@lint",
       "@phpcs",
+      "@phpstan",
       "@phpunit",
       "@behat"
     ]
