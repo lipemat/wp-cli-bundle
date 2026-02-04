@@ -2,10 +2,10 @@ diff --git a/src/Configuration.php b/src/Configuration.php
 index b095d235..58078354 100644
 --- a/src/Configuration.php
 +++ b/src/Configuration.php
-@@ -108,7 +108,7 @@ class Configuration
-     private bool $warnOnMultipleConfigs = false;
+@@ -132,7 +132,7 @@ class Configuration
      private string $colorMode = self::COLOR_MODE_AUTO;
      private string $interactiveMode = self::INTERACTIVE_MODE_AUTO;
+     private ProjectTrust $projectTrust;
 -    private ?string $updateCheck = null;
 -    private ?string $updateManualCheck = null;
 +    private ?string $updateCheck = 'never';
