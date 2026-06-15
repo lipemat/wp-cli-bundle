@@ -11,6 +11,9 @@
     },
     "wp-cli/restful": {
       "Null resource": ".patches/null-resource.patch"
+    },
+    "wp-cli/extension-command": {
+      "Simplify VCS checkout detection": ".patches/vcs-checkout-detection.patch"
     }
   }
 }

@@ -1,0 +1,23 @@
+--- a/src/WP_CLI/CommandWithUpgrade.php
++++ b/src/WP_CLI/CommandWithUpgrade.php
+@@ -749,20 +749,12 @@
+ 		if ( ! Utils\get_flag_value( $assoc_args, 'include-vcs', false ) && in_array( $this->item_type, [ 'plugin', 'theme' ], true ) ) {
+-			if ( ! class_exists( 'WP_Automatic_Updater' ) ) {
+-				if ( file_exists( ABSPATH . 'wp-admin/includes/class-wp-automatic-updater.php' ) ) {
+-					require_once ABSPATH . 'wp-admin/includes/class-wp-automatic-updater.php';
+-				} else {
+-					require_once ABSPATH . 'wp-admin/includes/class-wp-upgrader.php';
+-				}
+-			}
+-			$automatic_updater = new \WP_Automatic_Updater();
+ 			foreach ( $items_to_update as $item_key => $item_info ) {
+ 				if ( 'plugin' === $this->item_type ) {
+ 					$item_dir = WP_PLUGIN_DIR . '/' . dirname( $item_key );
+ 				} else {
+ 					$item_dir = get_theme_root( $item_key ) . '/' . $item_key;
+ 				}
+-				if ( $automatic_updater->is_vcs_checkout( $item_dir ) ) {
++				if ( \is_dir( \rtrim( $item_dir, '\\/' ) . '/.git' ) ) {
+ 					WP_CLI::warning( "{$item_info['name']}: Skipped update because a VCS checkout was detected. Use --include-vcs to override." );
+ 					++$skipped;
+ 					unset( $items_to_update[ $item_key ] );
