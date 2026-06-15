@@ -127,6 +127,7 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/szepeviktor/phpstan-wordpress" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/wp-cli/ability-command" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/wp-cli/block-command" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/wp-cli/ai-command" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
